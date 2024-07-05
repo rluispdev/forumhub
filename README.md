@@ -29,8 +29,8 @@ Bem-vindo à ForumHub API, uma aplicação robusta desenvolvida em Spring Boot p
 
 ## 📈 Melhorias Futuras
 
-- Endpoint - /respostas
-- Documentação com Swagger
+- `Novo` Endpoint - /respostas
+-  `Documentação` -  usando Swagger
 
 ## 📝 Licença
 
