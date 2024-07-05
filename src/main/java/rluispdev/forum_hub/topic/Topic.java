@@ -48,9 +48,24 @@ public class Topic {
 
 
     }
+
     // Lifecycle callback to set creationDate before persistence
     @PrePersist
     protected void onCreate() {
         this.creationDate = LocalDateTime.now();
     }
+
+    public void updateInfo(UpdateTopicDTO data) {
+        if (data.title() != null) {
+            this.title = data.title();
+        }
+
+        if (data.message() != null) {
+            this.message = data.message();
+        }
+
+    }
 }
+
+
+

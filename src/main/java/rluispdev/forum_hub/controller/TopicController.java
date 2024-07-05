@@ -1,5 +1,6 @@
 package rluispdev.forum_hub.controller;
 
+import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -39,5 +40,14 @@ public class TopicController {
     public ResponseEntity details(@PathVariable Long id){
         var topic =repository.getReferenceById(id);
         return ResponseEntity.ok(new TopicDetailsDTO(topic));
+    }
+
+    //ATUALIZAR_TOPICO
+    @PutMapping
+    @Transactional
+    public ResponseEntity update(@RequestBody @Valid UpdateTopicDTO data){
+        var topic =repository.getReferenceById(data.id());
+        topic.updateInfo(data);
+        return ResponseEntity.ok(new UpdateTopicDTO(topic));
     }
 }
