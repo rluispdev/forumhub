@@ -1,4 +1,4 @@
-![Template rluipdev]( )
+![Template rluipdev](Template/rluispdev.png)
 # FórumHub API
 Bem-vindo à ForumHub API, uma aplicação robusta desenvolvida em Spring Boot para gerenciar tópicos em um fórum online. Esta API permite que os usuários criem, visualizem, atualizem e excluam tópicos, proporcionando uma plataforma eficiente para discussão e compartilhamento de conhecimento. Além disso, a autenticação de usuários garante que apenas usuários autorizados possam acessar e manipular os dados de forma segura.
 
