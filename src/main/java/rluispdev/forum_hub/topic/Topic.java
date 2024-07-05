@@ -38,6 +38,8 @@ public class Topic {
     @Enumerated(EnumType.STRING)
     private Theme theme;
 
+    private Boolean active = true;
+
     public Topic(TopicDTO data) {
         this.title = data.title();
         this.message = data.message();
@@ -45,8 +47,7 @@ public class Topic {
         this.status = data.status();
         this.id_user = data.id_user();
         this.theme = data.theme();
-
-
+        this.active = true;
     }
 
     // Lifecycle callback to set creationDate before persistence
@@ -63,7 +64,9 @@ public class Topic {
         if (data.message() != null) {
             this.message = data.message();
         }
-
+    }
+    public void delete() {
+        this.active = false;
     }
 }
 

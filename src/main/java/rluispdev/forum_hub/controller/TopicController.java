@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import rluispdev.forum_hub.topic.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/topics")
@@ -50,4 +51,20 @@ public class TopicController {
         topic.updateInfo(data);
         return ResponseEntity.ok(new UpdateTopicDTO(topic));
     }
+
+    //DELETE
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        Optional<Topic> optionalTopic = repository.findById(id);
+        if (optionalTopic.isPresent()) {
+            Topic topic = optionalTopic.get();
+            topic.delete(); // This will set active to false
+            repository.save(topic); // Save the updated topic
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
