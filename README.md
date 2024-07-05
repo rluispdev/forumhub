@@ -6,7 +6,7 @@ Bem-vindo à ForumHub API, uma aplicação robusta desenvolvida em Spring Boot p
 
  
 
- -`Criação de Tópicos`: Permite que os usuários criem novos tópicos, fornecendo título, mensagem e outras informações relevantes.
+- `Criação de Tópicos`: Permite que os usuários criem novos tópicos, fornecendo título, mensagem e outras informações relevantes.
 - `Visualização de Tópicos`: Usuários podem listar e visualizar detalhes dos tópicos existentes no fórum.
 - `Atualização de Tópicos` : Permite que os usuários editem os tópicos que criaram.
 - `Exclusão de Tópicos`: Possibilita a remoção de tópicos indesejados ou obsoletos.
